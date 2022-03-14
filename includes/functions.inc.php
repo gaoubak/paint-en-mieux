@@ -102,7 +102,7 @@ function loginUser($connection, $uid, $pwd)
 {
     $uidExist = UsernameExist($connection, $uid, $uid);
 
-    if ($uidExist == false) {
+    if ($uidExist === false) {
         header("location: ../Login.php?error=wrongLogin");
         exit();
     }

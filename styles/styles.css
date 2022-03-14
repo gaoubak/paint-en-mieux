@@ -10,6 +10,26 @@ body {
   background: #efefef;
 }
 
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+  width: 45vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome-page .links {
+  margin: 2vh;
+}
+.welcome-page .links a {
+  color: black;
+  text-decoration: none;
+  margin: 1vw;
+}
+
 .tool-bar {
   display: flex;
   flex-direction: row;

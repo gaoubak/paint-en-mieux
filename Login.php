@@ -2,9 +2,9 @@
     <h1>Login</h1>
     <form action="./includes/Login.inc.php" method="POST">
         <label for="username">Your username/Email</label>
-        <input type="text" name="username" id="">
+        <input type="text" name="uid" id="">
         <label for="password">Your password</label>
-        <input type="password" name="password" id="">
+        <input type="password" name="pwd" id="">
         <button type="submit" name="submit">Login</button>
     </form>
     <?php
