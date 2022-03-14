@@ -1,0 +1,15 @@
+.tool-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.tool-bar .tools {
+  display: flex;
+  flex-direction: row;
+}
+.tool-bar .tools .tool {
+  height: 5vh;
+  width: 5vh;
+  border: 1px black solid;
+}/*# sourceMappingURL=styles.css.map */
