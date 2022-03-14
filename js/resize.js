@@ -1,4 +1,4 @@
-document.getElementById("resize").addEventListener("click", resizeActive());
+/* let resizebtn = document.getElementById("resize");
 
 let resizeActive = () => {
   console.log("app init");
@@ -9,4 +9,4 @@ let resizeActive = () => {
   } else {
     object.classList.remove("Resize-Active");
   }
-};
+}; */

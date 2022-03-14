@@ -1,11 +1,11 @@
 # paint-en-mieux
 
-| Personne | Rôle     |
-| -------- | -------- |
-| Ethan    | FrontEnd |
-| Faust    | FrontEnd |
-| Arsène   | Backend  |
-| Veljko   | Backend  |
+| Personne | Rôle         |
+| -------- | ------------ |
+| Ethan    | Front & Back |
+| Faust    | FrontEnd     |
+| Arsène   | Backend      |
+| Veljko   | Backend      |
 
 ---
 
@@ -28,7 +28,10 @@
 - [ ]Exporter le dessin au format image
 - [x]Exporter le dessin au format PDF
 
+---
+
 ## Optionnel mais bonne idée
 
-- Login/Signup
-- Dashboard des dessins récents
+- [En cours]Login
+- [x] Signup
+- [] Dashboard des dessins récents

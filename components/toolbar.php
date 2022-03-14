@@ -12,12 +12,12 @@
         <div class="tool shapes" id="txt">
             <img src="./styles/img/Txt.svg" />
         </div>
-        <div class="tool drag" id="position">
+        <button onclick="runDrag()" class="tool drag" id="position">
             <img src="./styles/img/Position.svg" />
-        </div>
-        <div class="tool shapes" id="resize">
+        </button>
+        <button onclick="resizeActive()" class="tool resize" id="resize">
             <img src="./styles/img/Resize.svg" />
-        </div>
+        </button>
         <div class="tool">
             <input type="color" name="primary-color" id="primarycolor">
         </div>
