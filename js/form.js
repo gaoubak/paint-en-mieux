@@ -41,6 +41,6 @@ function getForm() {
                 break;
         }
       }
-      addShape("triangle");
+      addShape();
   }
   getForm();

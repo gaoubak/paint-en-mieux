@@ -1,13 +1,13 @@
 <div class="tool-bar">
     <div class="tools">
         <div class="tool shapes" id="circle">
-            <img src="./styles/img/Circle.svg" />
+            <img src="./styles/img/Circle.svg" onclick="addShape('circle')" />
         </div>
         <div class="tool shapes" id="triangle">
-            <img src="./styles/img/Triangle.svg" />
+            <img src="./styles/img/Triangle.svg" onclick="addShape('triangle')" />
         </div>
         <div class="tool" id="rectange">
-            <img src="./styles/img/Rectangle.svg" />
+            <img src="./styles/img/Rectangle.svg" onclick="addShape('rectangle')" />
         </div>
         <div class="tool shapes" id="txt">
             <img src="./styles/img/Txt.svg" />
