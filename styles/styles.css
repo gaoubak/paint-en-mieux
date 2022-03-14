@@ -45,6 +45,10 @@ body {
   text-align: center;
   height: 5vh;
   width: 5vh;
+  resize: none;
+}
+
+.Resize-Active {
   resize: both;
   overflow: auto;
 }/*# sourceMappingURL=styles.css.map */
