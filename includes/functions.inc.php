@@ -85,3 +85,38 @@ function createUser($connection, $name, $email, $password)
     header("location: ../signup.php?error=none");
     exit();
 }
+// Vérifie que le formulaire n'est pas d'input vide
+// @Ethan
+function EmptyInputLogin($username, $pwd)
+{
+    if (empty($username) || empty($pwd)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+// Login l'utilisateur
+// @Ethan
+function loginUser($connection, $uid, $pwd)
+{
+    $uidExist = UsernameExist($connection, $uid, $uid);
+
+    if ($uidExist == false) {
+        header("location: ../Login.php?error=wrongLogin");
+        exit();
+    }
+    $pwdHashed = $uidExist['password'];
+    $checkPass = password_verify($pwd, $pwdHashed);
+
+    if ($checkPass === false) {
+        header("location: ../login.php?error=wrongLogin");
+        exit();
+    } else if ($checkPass === true) {
+        session_start();
+        $_SESSION["userid"] = $uidExist['usersId'];
+        $_SESSION["useruid"] = $uidExist['username'];
+        header("location: ../index.php");
+        exit();
+    }
+}

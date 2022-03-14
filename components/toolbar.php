@@ -1,17 +1,17 @@
 <div class="tool-bar">
     <div class="tools">
-        <div class="tool shapes" id="circle">
+        <button onclick='' class="tool shapes" id="circle">
             <img src="./styles/img/Circle.svg" />
-        </div>
-        <div class="tool shapes" id="triangle">
+        </button>
+        <button onclick='' class="tool shapes" id="triangle">
             <img src="./styles/img/Triangle.svg" />
-        </div>
-        <div class="tool" id="rectange">
+        </button>
+        <button onclick="" class="tool" id="rectange">
             <img src="./styles/img/Rectangle.svg" />
-        </div>
-        <div class="tool shapes" id="txt">
+        </button>
+        <button onclick='' class="tool shapes" id="txt">
             <img src="./styles/img/Txt.svg" />
-        </div>
+        </button>
         <button onclick="runDrag()" class="tool drag" id="position">
             <img src="./styles/img/Position.svg" />
         </button>
@@ -24,9 +24,9 @@
         <div class="tool">
             <input type="color" name="secondary-color" id="secondaryColor">
         </div>
-        <div class="tool" id="Eraser">
+        <button onclick="" class="tool" id="Eraser">
             <img src="./styles/img/Erase.svg" />
-        </div>
+        </button>
         <button onclick="window.print()" class="tool" id="Save">
             <img src="./styles/img/Save.svg" />
         </button>

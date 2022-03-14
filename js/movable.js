@@ -55,3 +55,42 @@ function runDrag() {
     }
   }
 }
+var myForm = document.querySelector("form");
+var square = document.querySelector(".square");
+
+myForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("jai envoyé le formulaire");
+});
+
+square.addEventListener("click", function (event) {
+  console.log("je suis le click", event);
+});
+
+square.addEventListener("mouseover", function (event) {
+  console.log("je suis le over", event);
+});
+
+var hasDoneDown = false;
+
+square.addEventListener("mousedown", function (event) {
+  hasDoneDown = true;
+  console.log("je suis le down", event);
+});
+
+square.addEventListener("mouseup", function (event) {
+  hasDoneDown = false;
+  console.log("je suis le up", event);
+});
+
+square.addEventListener("mousemove", function (event) {
+  // console.log('je suis le move', event);
+
+  if (hasDoneDown) {
+    var x = event.clientX - 50;
+    var y = event.clientY - 50;
+
+    square.style.left = x + "px";
+    square.style.top = y + "px";
+  }
+});

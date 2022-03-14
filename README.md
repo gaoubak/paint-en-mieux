@@ -11,42 +11,44 @@
 
 ## Requis
 
-[ ]Dessiner un rectangle
+### Les outils
 
-[ ]Dessiner un cercle ou une ellipse
+- ❌ Dessiner un rectangle
 
-[ ]Dessiner un triangle (pointe vers le haut)
+- ❌ Dessiner un cercle ou une ellipse
 
-[ ]Dessiner une zone de texte
+- ❌ Dessiner un triangle (pointe vers le haut)
 
-[x]Une couleur "primaire" utilisée pour le contour des formes ou pour la couleur du texte
+- ❌ Dessiner une zone de texte
 
-[x]Une couleur "secondaire" utilisée pour le remplissage des formes ou le surlignement du texte
+- ✅ Une couleur "primaire" utilisée pour le contour des formes ou pour la couleur du texte
 
-[ ]Un menu déroulant permettant de sélectionner une police parmi trois (minimum)
+- ✅Une couleur "secondaire" utilisée pour le remplissage des formes ou le surlignement du texte
 
-[x]Votre site doit proposer une grande zone blanche pour y dessiner des formes
+- ❌ Un menu déroulant permettant de sélectionner une police parmi trois (minimum)
 
-[ ]Au clic sur une forme, une zone doit apparaître permettant de :
+- ✅ Votre site doit proposer une grande zone blanche pour y dessiner des formes
 
-[ ]Déplacer la forme
+- Au clic sur une forme, une zone doit apparaître permettant de :
 
-[ ]Modier les dimensions de la forme
+  - ❌ Déplacer la forme
 
-[ ]Changer les couleurs de la forme
+  - ❌ Modier les dimensions de la forme
 
-[ ]Sauvegarder ce dessin (pour la reprendre plus tard)
+  - ✅ Changer les couleurs de la forme
 
-[ ]Charger un dessin (parmi les sauvegardes)
+- ❌ Sauvegarder ce dessin (pour la reprendre plus tard)
 
-[ ]Exporter le dessin au format image
+- ❌ Charger un dessin (parmi les sauvegardes)
 
-[x]Exporter le dessin au format PDF
+- ❌ Exporter le dessin au format image
+
+- ✅ Exporter le dessin au format PDF
 
 ---
 
 ## Optionnel mais bonne idée
 
-- [En cours]Login
-- [x] Signup
-- [] Dashboard des dessins récents
+- ♻️Login
+- ✅ Signup
+- ❌ Dashboard des dessins récents
