@@ -12,17 +12,26 @@
         <button onclick='addShape("text")' class="tool shapes" id="txt">
             <img src="./styles/img/Txt.svg" alt="add txt" />
         </button>
-        <!--  <button onclick="runDrag()" class="tool drag" id="position">
+        <div class="tool shapes txt">
+            <img src="./styles/img/Txt.svg" alt="add txt" />
+            <div class="font-list">
+                <button onclick="changeFont('Default')">Default</button>
+                <button onclick="changeFont('Montserrat')">Montserrat</button>
+                <button onclick="changeFont('BhuTuka')">BhutTuka</button>
+                <button onclick="changeFont('Smooch')">Smooch</button>
+            </div>
+        </div>
+        <button onclick="runDrag()" class="tool drag" id="position">
             <img src="./styles/img/Position.svg" alt="position" />
         </button>
-        <button onclick="resizeActive()" class="tool resize" id="resize">
+        <button onclick="resizable()" class="tool resize" id="resize">
             <img src="./styles/img/Resize.svg" alt="resize" />
-        </button> -->
+        </button>
         <div class="tool">
-            <input type="color" name="primary-color" id="primarycolor">
+            <input type="color" name="primary-color" id="primarycolor" onclick="colorChange()">
         </div>
         <div class="tool">
-            <input type="color" name="secondary-color" id="secondaryColor">
+            <input type="color" name="secondary-color" id="secondaryColor" onclick="colorChange()">
         </div>
         <button onclick="" class="tool" id="Eraser">
             <img src="./styles/img/Erase.svg" alt="eraser" />

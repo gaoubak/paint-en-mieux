@@ -12,6 +12,6 @@ require "./components/toolbar.php"; ?>
 <script>
 </script>
 <script src="./js/colors.js"></script>
+<script src="./js/shape.js"></script>
 <script src="./js/movable.js"></script>
 <script src="./js/resize.js"></script>
-<script src="./js/shape.js"></script>
