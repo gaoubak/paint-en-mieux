@@ -15,3 +15,4 @@ require "./components/toolbar.php"; ?>
 <script src="./js/shape.js"></script>
 <script src="./js/movable.js"></script>
 <script src="./js/resize.js"></script>
+<script src="./js/addtxt.js"></script>
