@@ -1,61 +1,56 @@
-var board = document.getElementById("board");
-
-
-function getForm() {
-  var board = document.getElementById("board");
-  var con1 = document.createElement("div");
-  tl = document.createElement("div");
-  tr = document.createElement("div");
-  bl = document.createElement("div");
-  br = document.createElement("div");
-  t = document.createElement("div");
-  tl.class = "tl";// Top left
-  tr.class = "tr";//Top Right
-  bl.class = "bl";//Bottom Left
-  br.class = "br";//Bottom Right
-  t.class = "t";//Top
-  // Create unique id
-    let id = () => {
-      return Math.floor((1 + Math.random()) * 0x10000)
-          .toString(16)
-          .substring(1);
-    }
-  
 
   // Create the Form for paint
   function addShape($shape) {
+    var board = document.getElementById("board");
+    var con1 = document.createElement("div");
+    tl = document.createElement("div");
+    tr = document.createElement("div");
+    bl = document.createElement("div");
+    br = document.createElement("div");
+    t = document.createElement("div");
+    tl.classList.add = "tl";// Top left
+    tr.classList.add = "tr";//Top Right
+    bl.classList.add = "bl";//Bottom Left
+    br.classList.add = "br";//Bottom Right
+    t.classList.add = "t";//Top
+    // Create unique id
+      let id = () => {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+      }
+
     switch ($shape) {
       case "circle":
         shapeC = document.createElement("div");
-        ma_Form.class = "circle";
-        shapeC.class = "item";
+        ma_Form.classList.add = "circle";
+        shapeC.classList.add = "item";
         shapeC.id = id();
-        shapes.appendChild(img);
-        board.appendChild(shapes);
+        board.appendChild(shapeC);
         break;
 
           case "triangle":
             shapeT = document.createElement("div");
-            shapeT.class = "triangle";
-            shapeT.class = "item";
+            shapeT.classList.add = "triangle";
+            shapeT.classList.add = "item";
             shapeT.id = id();
-            shapeT.appendChild(t,bl,br);
             board.appendChild(shapeT);
+            shapeT.appendChild(t,bl,br);
             break;
 
               case "rectangle":
                 shapeR = document.createElement("div");  
-                shapeR.class = "rectangle";
-                shapeR.class = "item";
+                shapeR.classList.add = "rectangle";
+                shapeR.classList.add = "item";
                 shapeR.id = id();
-                shapeR.appendChild(tl,tr,bl,br);
                 board.appendChild(shapeR);
+                shapeR.appendChild(tl,tr,bl,br);
                 break;
 
                 case "text":
                   shapeTT = document.createElement("input");  
-                  shapeTT.class = "texte";
-                  shapeTT.class = "item";
+                  shapeTT.classList.add = "texte";
+                  shapeTT.classList.add = "item";
                   shapeTT.id = id();
                   shapeTT.appendChild(tl,tr,bl,br);
                   board.appendChild(shapeTT);
@@ -67,5 +62,3 @@ function getForm() {
         }
       }
       addShape();
-  }
-  getForm();
