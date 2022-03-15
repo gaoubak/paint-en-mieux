@@ -1,20 +1,20 @@
-let objs = document.querySelectorAll(".item");
 function changeFont($font){
+    let addfont = document.querySelectorAll(".item");
     switch($font) {
         case "BhuTuka":
-            objs.classList.add("BhuTuka")         
+            font.classList.add("BhuTuka");         
         break;
         case "Smooch":
-            objs.classList.add("Smooch")         
+            font.classList.add("Smooch");         
         break;
         case "Montserrat":
-            objs.classList.add("Montserrat")         
+            font.classList.add("Montserrat");         
         break;
 
     default:
-        objs.classList.remove("BhuTuka")
-        objs.classList.remove("Smooch")
-        objs.classList.remove("Montserrat")
+        font.classList.remove("BhuTuka");
+        font.classList.remove("Smooch");
+        font.classList.remove("Montserrat");
     break;     
     }
 }

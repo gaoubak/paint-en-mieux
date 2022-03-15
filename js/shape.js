@@ -40,8 +40,8 @@ function addShape($shape) {
 
     case "triangle":
       shapeT = document.createElement("div");
-      shapeT.classList.add = "triangle";
-      shapeT.classList.add = "item";
+      shapeT.classList.add("triangle");
+      shapeT.classList.add("item");
       shapeT.id = id();
       board.appendChild(shapeT);
       shapeT.appendChild(t)
@@ -51,8 +51,8 @@ function addShape($shape) {
 
     case "rectangle":
       shapeR = document.createElement("div");
-      shapeR.classList.add = "rectangle";
-      shapeR.classList.add = "item";
+      shapeR.classList.add("rectangle");
+      shapeR.classList.add("item");
       shapeR.id = id();
       board.appendChild(shapeR);
       shapeR.appendChild(tl);
@@ -63,11 +63,9 @@ function addShape($shape) {
 
     case "text":
       shapeTT = document.createElement("div");
-      text = document.createElement("input")
-      shapeTT.classList.add = "texte";
-      shapeTT.classList.add = "item";
+      shapeTT.classList.add("texte") ;
+      shapeTT.classList.add("item");
       shapeTT.id = id();
-      shapeTT.appendChild(text);
       board.appendChild(shapeTT);
       shapeTT.appendChild(tl);
       shapeTT.appendChild(tr);
