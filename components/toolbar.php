@@ -1,6 +1,6 @@
 <div class="tool-bar">
-    <input type="text" name="projectname" id="projectname" placeholder="ProjectName">
     <div class="tools">
+        <input type="text" name="projectname" id="projectname" placeholder="Project Name...">
         <button onclick='onFocus()' class="tool shapes" id="circle">
             <img src="./styles/img/select.svg" alt="select" />
         </button>

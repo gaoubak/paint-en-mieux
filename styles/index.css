@@ -59,6 +59,7 @@ body {
 }
 .tool-bar .tools {
   height: 7vh;
+  padding: 0 1vw;
   background: #efefef;
   box-shadow: 5px 5px 10px #dedede, -5px -5px 10px #ffffff;
   display: flex;
@@ -156,4 +157,18 @@ img {
   flex-direction: column;
   position: inherit;
   transform: translateY(5vh);
+}
+
+#projectname {
+  height: 7vh;
+  border: none;
+  border-bottom: #1d1d1d solid 3px;
+  background: #efefef;
+}
+#projectname:focus {
+  border-bottom: transparent;
+  outline: none;
+}
+#projectname::placeholder {
+  color: #1d1d1d;
 }

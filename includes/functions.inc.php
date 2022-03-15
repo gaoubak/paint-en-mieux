@@ -96,7 +96,7 @@ function saveProject($connection, $author, $projectName, $board)
     mysqli_stmt_bind_param($stmt, "sss", $author, $projectName, $board);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../dashboard.php");
+    header("location: ./whiteboard.php");
     exit();
 }
 // Vérifie que le formulaire n'est pas d'input vide
