@@ -16,3 +16,4 @@ require "./components/toolbar.php"; ?>
 <script src="./js/movable.js"></script>
 <script src="./js/resize.js"></script>
 <script src="./js/addtxt.js"></script>
+<script src="./js/focus.js"></script>

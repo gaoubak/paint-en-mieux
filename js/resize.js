@@ -15,7 +15,7 @@ function resizable() {
 
       function mousemove(e) {
         if (isResizing) {
-          const item = document.querySelector(".item");
+          const item = document.querySelector(".focus");
           const rect = item.getBoundingClientRect();
 
           if (currentResizer.classList.contains("br")) {

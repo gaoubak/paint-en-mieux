@@ -6,6 +6,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+* button {
+  border: none;
+  background-color: transparent;
+}
+* button:hover {
+  border: none;
+  background-color: rgba(85, 85, 255, 0.226);
+  border-radius: 60%;
+}
 body {
   background: #efefef;
 }
@@ -46,6 +55,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  z-index: 99;
 }
 .tool-bar .tools {
   height: 7vh;
@@ -70,13 +80,6 @@ img {
 .circle {
   border-radius: 60%;
 }
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid red;
-}
 .item {
   position: absolute;
   z-index: 2;
@@ -87,6 +90,12 @@ img {
   min-width: 5vh;
   resize: none;
 }
+.triangle {
+  width: 40px;
+  height: 40px;
+  background: green;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
 .resizer {
   height: 10px;
   width: 10px;
@@ -95,6 +104,10 @@ img {
   border: 3px solid black;
   z-index: 3;
   position: absolute;
+  display: none;
+}
+.focus .resizer {
+  display: block;
 }
 .tl {
   top: -1px;
@@ -122,7 +135,9 @@ img {
   cursor: n-resize;
 }
 .text {
+  display: flex;
   float: left;
+
   text-align: center;
   line-height: 24px;
   vertical-align: center;

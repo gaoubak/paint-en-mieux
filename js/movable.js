@@ -1,6 +1,6 @@
 // Va dans /deprecated/movable.js si tu veux voir l'ancien script
 function runDrag() {
-  const item = document.querySelector(".item");
+  const item = document.querySelector(".focus");
 
   item.addEventListener("mousedown", mousedown);
 

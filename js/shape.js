@@ -4,7 +4,6 @@ let id = () => {
     .toString(16)
     .substring(1);
 };
-oneclik.$shape
 // Create the Form for paint
 function addShape($shape) {
   var board = document.getElementById("board");
@@ -29,7 +28,6 @@ function addShape($shape) {
       shapeC = document.createElement("div");
       shapeC.classList.add("circle");
       shapeC.classList.add("item");
-      onclick.classList.add("focus");
       shapeC.id = id();
       board.appendChild(shapeC);
       shapeC.appendChild(tl);
@@ -42,19 +40,17 @@ function addShape($shape) {
       shapeT = document.createElement("div");
       shapeT.classList.add("triangle");
       shapeT.classList.add("item");
-      onclick.classList.add("focus");
       shapeT.id = id();
       board.appendChild(shapeT);
-      shapeT.appendChild(t)
+      shapeT.appendChild(t);
       shapeT.appendChild(br);
-      shapeT.appendChild(bl)
+      shapeT.appendChild(bl);
       break;
 
     case "rectangle":
       shapeR = document.createElement("div");
       shapeR.classList.add("rectangle");
       shapeR.classList.add("item");
-      onclick.classList.add("focus");
       shapeR.id = id();
       board.appendChild(shapeR);
       shapeR.appendChild(tl);
@@ -65,9 +61,9 @@ function addShape($shape) {
 
     case "text":
       shapeTT = document.createElement("div");
-      shapeTT.classList.add("texte") ;
+      shapeTT.classList.add("texte");
       shapeTT.classList.add("item");
-      onclick.classList.add("focus");
+      shapeTT.setAttribute("contenteditable", "");
       shapeTT.id = id();
       board.appendChild(shapeTT);
       shapeTT.appendChild(tl);
