@@ -37,7 +37,7 @@
 
   - ✅ Changer les couleurs de la forme
 
-- ❌ Sauvegarder ce dessin (pour la reprendre plus tard)
+- ✅ Sauvegarder ce dessin (pour la reprendre plus tard) N.B: c'est fait mais les objets javascript sont pas les bon
 
 - ❌ Charger un dessin (parmi les sauvegardes)
 
