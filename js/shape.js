@@ -1,4 +1,3 @@
-
 // Create unique id
 let id = () => {
   return Math.floor((1 + Math.random()) * 0x10000)
@@ -20,11 +19,11 @@ function addShape($shape) {
   bl.classList.add("bl"); //Bottom Left
   br.classList.add("br"); //Bottom Right
   t.classList.add("t"); //Top
-  tl.classList.add("resizer"); 
-  tr.classList.add("resizer"); 
-  bl.classList.add("resizer"); 
-  br.classList.add("resizer"); 
-  t.classList.add("resizer"); 
+  tl.classList.add("resizer");
+  tr.classList.add("resizer");
+  bl.classList.add("resizer");
+  br.classList.add("resizer");
+  t.classList.add("resizer");
   switch ($shape) {
     case "circle":
       shapeC = document.createElement("div");
@@ -67,7 +66,6 @@ function addShape($shape) {
       shapeTT.classList.add("item");
       shapeTT.setAttribute("contenteditable", "");
       shapeTT.id = id();
-      shapeTT.appendChild(text);
       board.appendChild(shapeTT);
       shapeTT.appendChild(tl);
       shapeTT.appendChild(tr);
