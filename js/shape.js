@@ -5,7 +5,7 @@ let id = () => {
     .toString(16)
     .substring(1);
 };
-
+oneclik.$shape
 // Create the Form for paint
 function addShape($shape) {
   var board = document.getElementById("board");
