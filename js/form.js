@@ -1,4 +1,3 @@
-var circle = document.getElementById("circle");
 var conteneur = document.getElementById("board");
 var img = document.createElement("img");
 
@@ -11,6 +10,8 @@ function getForm() {
         ma_Form = document.createElement("div");
         img = document.createElement("img");
         ma_Form.class = "circle";
+        ma_Form.class = "item";
+        ma
         ma_Form.id = 876543;
         img.src = "./styles/img/Circle.svg";
         ma_Form.appendChild(img);
