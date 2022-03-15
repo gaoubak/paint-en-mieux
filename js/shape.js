@@ -61,9 +61,10 @@ function addShape($shape) {
       break;
 
     case "text":
-      shapeTT = document.createElement("input");
+      shapeTT = document.createElement("div");
       shapeTT.classList.add("texte");
       shapeTT.classList.add("item");
+      shapeTT.setAttribute("contenteditable", "");
       shapeTT.id = id();
       board.appendChild(shapeTT);
       shapeTT.appendChild(tl);
