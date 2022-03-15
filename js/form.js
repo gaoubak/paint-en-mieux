@@ -1,42 +1,66 @@
-var conteneur = document.getElementById("board");
-var img = document.createElement("img");
+var board = document.getElementById("board");
+
 
 function getForm() {
-  var conteneur = document.getElementById("board");
+  var board = document.getElementById("board");
+  var con1 = document.createElement("div");
+  tl = document.createElement("div");
+  tr = document.createElement("div");
+  bl = document.createElement("div");
+  br = document.createElement("div");
+  t = document.createElement("div");
+  tl.class = "tl";// Top left
+  tr.class = "tr";//Top Right
+  bl.class = "bl";//Bottom Left
+  br.class = "br";//Bottom Right
+  t.class = "t";//Top
+  // Create unique id
+    let id = () => {
+      return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+    }
+  
+
   // Create the Form for paint
   function addShape($shape) {
     switch ($shape) {
       case "circle":
-        ma_Form = document.createElement("div");
-        img = document.createElement("img");
+        shapeC = document.createElement("div");
         ma_Form.class = "circle";
-        ma_Form.class = "item";
-        ma
-        ma_Form.id = 876543;
-        img.src = "./styles/img/Circle.svg";
-        ma_Form.appendChild(img);
-        conteneur.appendChild(ma_Form);
+        shapeC.class = "item";
+        shapeC.id = id();
+        shapes.appendChild(img);
+        board.appendChild(shapes);
         break;
 
           case "triangle":
-            ma_Form = document.createElement("div");
-            img = document.createElement("img");
-            ma_Form.class = "triangle";
-            ma_Form.id = 123456;
-            img.src = "../styles/img/Triangle.svg";
-            ma_Form.appendChild(img);
-            conteneur.appendChild(ma_Form);
+            shapeT = document.createElement("div");
+            shapeT.class = "triangle";
+            shapeT.class = "item";
+            shapeT.id = id();
+            shapeT.appendChild(t,bl,br);
+            board.appendChild(shapeT);
             break;
 
               case "rectangle":
-                ma_Form = document.createElement("div");
-                img = document.createElement("img");
-                ma_Form.class = "rectangle";
-                ma_Form.id = 987654;
-                img.src = "../styles/img/Rectangle.svg";
-                ma_Form.appendChild(img);
-                conteneur.appendChild(ma_Form);
+                shapeR = document.createElement("div");  
+                shapeR.class = "rectangle";
+                shapeR.class = "item";
+                shapeR.id = id();
+                shapeR.appendChild(tl,tr,bl,br);
+                board.appendChild(shapeR);
                 break;
+
+                case "text":
+                  shapeTT = document.createElement("input");  
+                  shapeTT.class = "texte";
+                  shapeTT.class = "item";
+                  shapeTT.id = id();
+                  shapeTT.appendChild(tl,tr,bl,br);
+                  board.appendChild(shapeTT);
+                break;
+
 
               default:
                 break;

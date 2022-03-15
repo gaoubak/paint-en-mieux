@@ -92,6 +92,11 @@ img {
   right: -1px;
   cursor: se-resize;
 }
+.t{
+  top: -1px;
+  margin: 0 auto;
+  cursor: n-resize;
+}
 .Resize-Active {
   resize: both;
   overflow: auto;
