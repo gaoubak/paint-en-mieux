@@ -2,12 +2,6 @@
 require "./components/header.php";
 require "./components/toolbar.php"; ?>
 <div id="board">
-    <!-- <div class="item">
-        <div class="resizer tr"></div>
-        <div class="resizer tl"></div>
-        <div class="resizer bl"></div>
-        <div class="resizer br"></div>
-    </div> -->
 </div>
 <script>
 </script>
@@ -17,3 +11,15 @@ require "./components/toolbar.php"; ?>
 <script src="./js/resize.js"></script>
 <script src="./js/addtxt.js"></script>
 <script src="./js/focus.js"></script>
+<?php
+function getBoardContent($projectName)
+{
+    require "./includes/db_connect.inc.php";
+    require "./includes/functions.inc.php";
+
+    $author = $_SESSION["useruid"];
+    $boardcontent = $_GET["uid"];
+    saveProject($connection, $author, $projectName, $boardcontent);
+}
+?>
+<script src="./js/project.inc.js"></script>

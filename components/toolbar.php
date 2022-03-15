@@ -1,4 +1,5 @@
 <div class="tool-bar">
+    <input type="text" name="projectname" id="projectname" placeholder="ProjectName">
     <div class="tools">
         <button onclick='onFocus()' class="tool shapes" id="circle">
             <img src="./styles/img/select.svg" alt="select" />
@@ -40,7 +41,7 @@
             <input type="color" name="secondary-color" id="secondaryColor" onclick="colorChange()">
         </div>
         <!-- à refaire-->
-        <button onclick="window.print()" class="tool" id="Save">
+        <button onclick="divToJson()" class="tool" id="Save">
             <img src="./styles/img/Save.svg" alt="Save" />
         </button>
         <a href="./includes/Logout.inc.php" class="tool"><img src="./styles/img/Logout.svg" alt="LogOut"></a>
