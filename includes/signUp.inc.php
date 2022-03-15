@@ -33,6 +33,7 @@ if (isset($_POST['submit'])) {
     }
 
     createUser($connection, $name, $email, $password);
+    header("location: ../Login.php");
 } else {
     header("location: ../signUp.php");
     exit();

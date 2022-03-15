@@ -1,22 +1,22 @@
 <div class="tool-bar">
     <div class="tools">
         <button onclick='' class="tool shapes" id="circle">
-            <img src="./styles/img/Circle.svg" />
+            <img src="./styles/img/Circle.svg" alt="add circle" />
         </button>
         <button onclick='' class="tool shapes" id="triangle">
-            <img src="./styles/img/Triangle.svg" />
+            <img src="./styles/img/Triangle.svg" alt="add triangle" />
         </button>
         <button onclick="" class="tool" id="rectange">
-            <img src="./styles/img/Rectangle.svg" />
+            <img src="./styles/img/Rectangle.svg" alt="add rectangle" />
         </button>
         <button onclick='' class="tool shapes" id="txt">
-            <img src="./styles/img/Txt.svg" />
+            <img src="./styles/img/Txt.svg" alt="add txt" />
         </button>
         <button onclick="runDrag()" class="tool drag" id="position">
-            <img src="./styles/img/Position.svg" />
+            <img src="./styles/img/Position.svg" alt="position" />
         </button>
         <button onclick="resizeActive()" class="tool resize" id="resize">
-            <img src="./styles/img/Resize.svg" />
+            <img src="./styles/img/Resize.svg" alt="resize" />
         </button>
         <div class="tool">
             <input type="color" name="primary-color" id="primarycolor">
@@ -25,10 +25,11 @@
             <input type="color" name="secondary-color" id="secondaryColor">
         </div>
         <button onclick="" class="tool" id="Eraser">
-            <img src="./styles/img/Erase.svg" />
+            <img src="./styles/img/Erase.svg" alt="eraser" />
         </button>
         <button onclick="window.print()" class="tool" id="Save">
-            <img src="./styles/img/Save.svg" />
+            <img src="./styles/img/Save.svg" alt="Save" />
         </button>
+        <a href="./includes/Logout.inc.php" class="tool"><img src="./styles/img/Logout.svg" alt="LogOut"></a>
     </div>
 </div>
