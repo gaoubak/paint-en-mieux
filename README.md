@@ -13,13 +13,13 @@
 
 ### Les outils
 
-- [Phase de test] Dessiner un rectangle
+- ✅ Dessiner un rectangle
 
-- [Phase de test] Dessiner un cercle ou une ellipse
+- ✅ Dessiner un cercle ou une ellipse
 
-- [Phase de test] Dessiner un triangle (pointe vers le haut)
+- ❌ Dessiner un triangle (pointe vers le haut)
 
-- [Phase de test] Dessiner une zone de texte
+- ✅ Dessiner une zone de texte
 
 - ✅ Une couleur "primaire" utilisée pour le contour des formes ou pour la couleur du texte
 
