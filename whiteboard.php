@@ -3,8 +3,8 @@ require "./components/header.php";
 require "./components/toolbar.php"; ?>
 <div id="board">
     <div class="item">
-        <div class="resizer tl"></div>
         <div class="resizer tr"></div>
+        <div class="resizer tl"></div>
         <div class="resizer bl"></div>
         <div class="resizer br"></div>
     </div>

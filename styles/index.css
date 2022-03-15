@@ -68,7 +68,7 @@ img {
   width: 10px;
   border-radius: 60%;
   background: white;
-  border: thick solid black;
+  border: 3px solid black;
   z-index: 3;
   position: absolute;
 }
@@ -91,6 +91,11 @@ img {
   bottom: -1px;
   right: -1px;
   cursor: se-resize;
+}
+.t {
+  top: 0;
+  left: 40%;
+  cursor: n-resize;
 }
 .Resize-Active {
   resize: both;

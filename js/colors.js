@@ -1,15 +1,17 @@
-let shape = document.getElementById("mydiv");
+let objs = document.querySelectorAll(".item");
 let Primarycolor = document.getElementById("primarycolor");
-Primarycolor.addEventListener("input", function (e) {
-  Primarycolor.value = this.value;
-  let fillColor = this.value;
-  shape.style.background = this.value;
-});
-let Secdondarycolor = document.getElementById("secondaryColor");
-Secdondarycolor.addEventListener("input", function (e) {
-  Secdondarycolor.value = this.value;
-  let bordercolor = this.value;
-  console.log(bordercolor);
-  shape.style.border = `thick solid ${this.value}`;
-  shape.style.borderStyle = "solid";
-});
+for (let obj of objs) {
+  Primarycolor.addEventListener("input", function (e) {
+    Primarycolor.value = this.value;
+    let fillColor = this.value;
+    obj.style.background = this.value;
+  });
+  let Secdondarycolor = document.getElementById("secondaryColor");
+  Secdondarycolor.addEventListener("input", function (e) {
+    Secdondarycolor.value = this.value;
+    let bordercolor = this.value;
+    console.log(bordercolor);
+    obj.style.border = `thick solid ${this.value}`;
+    obj.style.borderStyle = "solid";
+  });
+}

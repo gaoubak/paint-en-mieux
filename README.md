@@ -13,13 +13,13 @@
 
 ### Les outils
 
-- ❌ Dessiner un rectangle
+- [Phase de test] Dessiner un rectangle
 
-- ❌ Dessiner un cercle ou une ellipse
+- [Phase de test] Dessiner un cercle ou une ellipse
 
-- ❌ Dessiner un triangle (pointe vers le haut)
+- [Phase de test] Dessiner un triangle (pointe vers le haut)
 
-- ❌ Dessiner une zone de texte
+- [Phase de test] Dessiner une zone de texte
 
 - ✅ Une couleur "primaire" utilisée pour le contour des formes ou pour la couleur du texte
 
@@ -31,9 +31,9 @@
 
 - Au clic sur une forme, une zone doit apparaître permettant de :
 
-  - ❌ Déplacer la forme
+  - ✅ Déplacer la forme
 
-  - ❌ Modier les dimensions de la forme
+  - ✅ Modier les dimensions de la forme
 
   - ✅ Changer les couleurs de la forme
 
@@ -49,6 +49,6 @@
 
 ## Optionnel mais bonne idée
 
-- ♻️Login
+- ✅Login
 - ✅ Signup
 - ❌ Dashboard des dessins récents
