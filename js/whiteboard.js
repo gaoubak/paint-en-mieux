@@ -55,13 +55,44 @@ function colorChange() {
 // @Ethan
 function onFocus() {
   let listofitem = document.querySelectorAll(".item");
-
+  // Création des éléments pour changer la taille de l'objet
+  tl = document.createElement("div");
+  tr = document.createElement("div");
+  bl = document.createElement("div");
+  br = document.createElement("div");
+  t = document.createElement("div");
+  // Ajout des éléments pour changer la taille de l'objet
+  tl.classList.add("tl"); // Top left
+  tr.classList.add("tr"); //Top Right
+  bl.classList.add("bl"); //Bottom Left
+  br.classList.add("br"); //Bottom Right
+  t.classList.add("t"); //Top
+  tl.classList.add("resizer");
+  tr.classList.add("resizer");
+  bl.classList.add("resizer");
+  br.classList.add("resizer");
+  t.classList.add("resizer");
   for (let item of listofitem) {
     item.addEventListener("click", () => {
       listofitem.forEach((i) => {
         i.classList.remove("focus");
+        i.innerHTML = "";
       });
       item.classList.add("focus");
+      if (
+        item.classList.contains("circle") ||
+        item.classList.contains("rectangle") ||
+        item.classList.contains("text")
+      ) {
+        item.appendChild(tl);
+        item.appendChild(tr);
+        item.appendChild(br);
+        item.appendChild(bl);
+      } else if (item.classList.contains("triangle")) {
+        item.appendChild(t);
+        item.appendChild(br);
+        item.appendChild(bl);
+      }
     });
   }
 }
@@ -165,25 +196,7 @@ let id = () => {
 };
 // Création de l'objet et de sa forme
 function addShape($shape) {
-  var board = document.getElementById("board");
-  var con1 = document.createElement("div");
-  // Création des éléments pour changer la taille de l'objet
-  tl = document.createElement("div");
-  tr = document.createElement("div");
-  bl = document.createElement("div");
-  br = document.createElement("div");
-  t = document.createElement("div");
-  // Ajout des éléments pour changer la taille de l'objet
-  tl.classList.add("tl"); // Top left
-  tr.classList.add("tr"); //Top Right
-  bl.classList.add("bl"); //Bottom Left
-  br.classList.add("br"); //Bottom Right
-  t.classList.add("t"); //Top
-  tl.classList.add("resizer");
-  tr.classList.add("resizer");
-  bl.classList.add("resizer");
-  br.classList.add("resizer");
-  t.classList.add("resizer");
+  let board = document.getElementById("board");
   switch ($shape) {
     case "circle":
       shapeC = document.createElement("div");
@@ -191,10 +204,6 @@ function addShape($shape) {
       shapeC.classList.add("item");
       shapeC.id = id();
       board.appendChild(shapeC);
-      shapeC.appendChild(tl);
-      shapeC.appendChild(tr);
-      shapeC.appendChild(br);
-      shapeC.appendChild(bl);
       break;
 
     case "triangle":
@@ -203,9 +212,7 @@ function addShape($shape) {
       shapeT.classList.add("item");
       shapeT.id = id();
       board.appendChild(shapeT);
-      shapeT.appendChild(t);
-      shapeT.appendChild(br);
-      shapeT.appendChild(bl);
+
       break;
 
     case "rectangle":
@@ -214,10 +221,6 @@ function addShape($shape) {
       shapeR.classList.add("item");
       shapeR.id = id();
       board.appendChild(shapeR);
-      shapeR.appendChild(tl);
-      shapeR.appendChild(tr);
-      shapeR.appendChild(bl);
-      shapeR.appendChild(br);
       break;
 
     case "text":
@@ -227,10 +230,6 @@ function addShape($shape) {
       shapeTT.setAttribute("contenteditable", "");
       shapeTT.id = id();
       board.appendChild(shapeTT);
-      shapeTT.appendChild(tl);
-      shapeTT.appendChild(tr);
-      shapeTT.appendChild(bl);
-      shapeTT.appendChild(br);
       break;
 
     default:
@@ -242,27 +241,34 @@ function addShape($shape) {
 // Et de le transmettre à php pour une sauvegarde sur le serveur
 //! fonctionne mais le serveur ne peut pas récupérer un élément aussi long
 //? Abandon de l'option whiteboard et création de l'option blackboard avec canvas le 16/03 dans la matinée
-/*
-function divToJson() {
-  let listofitem = document.querySelectorAll(".item");
 
-  for (let item of listofitem) {
-    listofitem.forEach((i) => {
-      i.classList.remove("focus");
-    });
-  }
-  let board = document.getElementById("board");
-  let childrens = [];
-   let elements = board.children
-   for (let i = 0; i < elements.length; i++) {
-       let childrenAndAttributes = elements[i].attributes
-       childrens.push(childrenAndAttributes)
-   }
-  for (let i = 0; i < board.innerHTML.length; i++) {
-    childrens.push(board.innerHTML);
-  }
-  console.log(childrens);
-  let projectname = document.getElementById("projectname").value;
-  window.location = `whiteboard.php?board="${childrens}"&projectName=${projectname}`;
-}
-*/
+// function divToJson() {
+//   let listofitem = document.querySelectorAll(".item");
+
+//   for (let item of listofitem) {
+//     listofitem.forEach((i) => {
+//       i.classList.remove("focus");
+//       i.innerHTML = "";
+//     });
+//   }
+//   let board = document.getElementById("board");
+//   let childrens = [];
+//   -let elements = board.children
+//   -for (let i = 0; i < elements.length; i++) {
+//   -    let childrenAndAttributes = elements[i].attributes
+//   -    childrens.push(childrenAndAttributes)
+//   -}
+/* let childrens = [];
+    let board = document.getElementById("board");
+    for (let i = 0; i < board.innerHTML.length; i++) {
+      childrens.push(board.innerHTML);
+    }
+    let projectname = document.getElementById("projectname").value;
+    console.log("Code envoyer"); */
+//   for (let i = 0; i < board.innerHTML.length; i++) {
+//     childrens.push(board.innerHTML);
+//   }
+//   console.log(childrens);
+//   let projectname = document.getElementById("projectname").value;
+//   window.location = `whiteboard.php?board="${childrens}"&projectName=${projectname}`;
+// }

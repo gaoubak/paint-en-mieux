@@ -10,24 +10,17 @@
             <label for="password">Your password</label>
             <input type="password" name="pwd" id="">
         </div>
+        <?php
+        if (isset($_GET['error'])) {
+            if ($_GET['error'] == 'wrongLogin') {
+                echo "<p class='error'>One of the two fields is wrong</p>";
+            } else if ($_GET['error'] == 'emptyinput') {
+                echo "<p class='error'>Fill up all the fields</p>";
+            }
+        }
+        ?>
         <button type="submit" name="submit">Login</button>
         <a href="signUp.php">Do you want to create an account instead ?</a>
     </form>
-    <?php
-    if (isset($_GET['error'])) {
-        if ($_GET['error'] == 'emptyinput') {
-            echo "<p class='error'>Fill all fields</p>";
-        } else if ($_GET['error'] == 'InvalidUsername') {
-            echo "<p class='error'>Your username has an forbidden character</p>";
-        } else if ($_GET['error'] == 'invalidEmail') {
-            echo "<p class='error'>Your email isn't valid</p>";
-        } else if ($_GET['error'] == 'passwordAreDifferent') {
-            echo "<p class='error'>The password are not the same</p>";
-        } else if ($_GET['error'] == 'usernameTaken') {
-            echo "<p class='error'>This username is taken</p>";
-        } else if ($_GET['error'] == 'none') {
-            echo "<p class='error'>This username is taken</p>";
-        }
-    }
-    ?>
+
 </section>

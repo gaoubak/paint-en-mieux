@@ -336,7 +336,7 @@ body {
   width: 5vw;
   align-items: center;
   text-align: center;
-  background: red;
+  background: transparent;
   border-radius: 16px;
   line-height: 24px;
 }
