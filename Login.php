@@ -1,11 +1,17 @@
+<?php require "./components/header.php" ?>
 <section class="Login-Form">
-    <h1>Login</h1>
     <form action="./includes/Login.inc.php" method="POST">
-        <label for="username">Your username/Email</label>
-        <input type="text" name="uid" id="">
-        <label for="password">Your password</label>
-        <input type="password" name="pwd" id="">
+        <h1>Login</h1>
+        <div class="uid">
+            <label for="username">Your username/Email</label>
+            <input type="text" name="uid" id="">
+        </div>
+        <div class="password">
+            <label for="password">Your password</label>
+            <input type="password" name="pwd" id="">
+        </div>
         <button type="submit" name="submit">Login</button>
+        <a href="signUp.php">Do you want to create an account instead ?</a>
     </form>
     <?php
     if (isset($_GET['error'])) {
