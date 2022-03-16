@@ -6,12 +6,7 @@ if (!isset($_SESSION["useruid"])) {
 } ?>
 <div id="board">
 </div>
-<script src="./js/colors.js"></script>
-<script src="./js/shape.js"></script>
-<script src="./js/movable.js"></script>
-<script src="./js/resize.js"></script>
-<script src="./js/addtxt.js"></script>
-<script src="./js/focus.js"></script>
+<script src="./js/whiteboard.js"></script>
 <script>
 function divToJson() {
     let listofitem = document.querySelectorAll(".item");
@@ -37,12 +32,12 @@ function divToJson() {
 }
 </script>
 <?php
-require "./includes/db_connect.inc.php";
-require "./includes/functions.inc.php";
-if (isset($_GET["board"]) && isset($_GET["projectName"])) {
-    $boardcontent = $_GET["board"];
-    $projectName = $_GET["projectName"];
-    $author = $_SESSION["useruid"];
-    saveProject($connection, $author, $projectName, $boardcontent);
-}
-?>
+    require "./includes/db_connect.inc.php";
+    require "./includes/functions.inc.php";
+    if (isset($_GET["board"]) && isset($_GET["projectName"])) {
+        $boardcontent = $_GET["board"];
+        $projectName = $_GET["projectName"];
+        $author = $_SESSION["useruid"];
+        saveProject($connection, $author, $projectName, $boardcontent);
+    }
+    ?>
