@@ -8,9 +8,7 @@
         if ($host == $_SERVER['SERVER_NAME'] . "/paint-en-mieux/whiteboard.php") {
             require "./components/whiteboard.nav.php";
         } elseif ($host == $_SERVER['SERVER_NAME'] . "/paint-en-mieux/blackboard.php") {
-            print_r('
-                    
-            ');
+            print_r('');
         }
         ?>
     </div>

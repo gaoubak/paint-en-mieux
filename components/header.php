@@ -11,6 +11,7 @@ session_start();
     <title>Paint en mieux</title>
     <link rel="stylesheet" href="./styles/global.css" />
     <!--    <meta http-equiv="refresh" content="30" /> -->
+
 </head>
 
 <body>

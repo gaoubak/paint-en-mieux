@@ -38,6 +38,6 @@
 <div class="tool">
     <input type="color" name="secondary-color" id="secondaryColor" onclick="colorChange()">
 </div>
-<button onclick="callPHP()" class="tool" id="Save">
+<button onclick="screenshot()" class="tool" id="Save">
     <img src="./styles/img/Save.svg" alt="Save" />
 </button>
