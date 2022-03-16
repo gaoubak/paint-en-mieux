@@ -13,7 +13,8 @@
 
 ### Les outils
 
-<progress value="18" max="36"></progress>
+58%
+<progress value="21" max="36"></progress>
 | Fonctionnalité | Blackboard | Whiteboard |
 | -------------------------------------------------------------------------------------------- | ------------ | ------------ |
 | Dessiner un rectangle | 🔜 | ✅ |
