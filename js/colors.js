@@ -1,19 +1,15 @@
 function colorChange() {
-  let objs = document.querySelectorAll(".item");
+  let obj = document.querySelector(".focus");
   let Primarycolor = document.getElementById("primarycolor");
-  for (let obj of objs) {
-    Primarycolor.addEventListener("input", function (e) {
-      Primarycolor.value = this.value;
-      let fillColor = this.value;
-      obj.style.background = this.value;
-    });
-    let Secdondarycolor = document.getElementById("secondaryColor");
-    Secdondarycolor.addEventListener("input", function (e) {
-      Secdondarycolor.value = this.value;
-      let bordercolor = this.value;
-      console.log(bordercolor);
-      obj.style.border = `thick solid ${this.value}`;
-      obj.style.borderStyle = "solid";
-    });
-  }
+  let Secdondarycolor = document.getElementById("secondaryColor");
+  Primarycolor.addEventListener("input", (e) => {
+    let bg = Primarycolor.value;
+    obj.style.backgroundColor = bg;
+    obj = null;
+  });
+  Secdondarycolor.addEventListener("input", (e) => {
+    let bg = Secdondarycolor.value;
+    obj.style.border = "thick solid" + bg;
+    obj = null;
+  });
 }

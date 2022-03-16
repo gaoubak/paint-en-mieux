@@ -1,7 +1,10 @@
 <div class="tool-bar">
     <div class="tools">
         <input type="text" name="projectname" id="projectname" placeholder="Project Name...">
-        <button onclick='onFocus()' class="tool shapes" id="circle">
+        <a href="dashboard.php" class="tool shapes" id="home">
+            <img src="./styles/img/home.svg" alt="select" />
+        </a>
+        <button onclick='onFocus()' class="tool shapes" id="focus">
             <img src="./styles/img/select.svg" alt="select" />
         </button>
         <button onclick="eraseObject()" class="tool" id="Eraser">
@@ -41,9 +44,14 @@
             <input type="color" name="secondary-color" id="secondaryColor" onclick="colorChange()">
         </div>
         <!-- à refaire-->
-        <button onclick="divToJson()" class="tool" id="Save">
-            <img src="./styles/img/Save.svg" alt="Save" />
-        </button>
+        <?php
+        $host = $_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"];
+        if ($host == $_SERVER['SERVER_NAME'] . "/paint-en-mieux/whiteboard.php") {
+            echo "";
+        } elseif ($host == $_SERVER['SERVER_NAME'] . "/paint-en-mieux/blackboard.php") {
+            echo '<button onclick="divToJson()" class="tool" id="Save"><img src="./styles/img/Save.svg" alt="Save" /></button>';
+        }
+        ?>
         <a href="./includes/Logout.inc.php" class="tool"><img src="./styles/img/Logout.svg" alt="LogOut"></a>
     </div>
 </div>

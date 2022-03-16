@@ -1,5 +1,8 @@
-<?php require "./components/header.php" ?>
-<?php require "./components/toolbar.php" ?>
+<?php require "./components/header.php";
+require "./components/toolbar.php";
+if (!isset($_SESSION["useruid"])) {
+    header("location: index.php");
+} ?>
 <canvas id="canvas"></canvas>
 <script>
 window.addEventListener('load', () => {

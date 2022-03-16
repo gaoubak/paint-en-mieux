@@ -3,6 +3,9 @@ require "./components/header.php";
 require "./includes/db_connect.inc.php";
 $getProjectsCommand = "SELECT projectname,author FROM projects";
 $getProjects = mysqli_query($connection, $getProjectsCommand);
+if (!isset($_SESSION["useruid"])) {
+    header("location: index.php");
+}
 ?>
 
 <div class="dashboard">
@@ -19,6 +22,14 @@ $getProjects = mysqli_query($connection, $getProjectsCommand);
             <img class="create-project" src="./styles/img/add.svg" alt="">
             <h3>Create new project</h3>
         </div>
+        <div id="createproject" class="invisible">
+            <div class="with-whiteboard">
+                <a href="whiteboard.php">Create just a draft</a>
+            </div>
+            <div class="with-blackboard">
+                <a href="blackboard.php">Create a permanent board</a>
+            </div>
+        </div>
         <?php
         if (mysqli_num_rows($getProjects) > 0) {
             while ($row = mysqli_fetch_assoc($getProjects)) {
@@ -34,7 +45,14 @@ $getProjects = mysqli_query($connection, $getProjectsCommand);
 mysqli_close($connection); ?>
 <script>
 let addBtn = document.getElementById("addCard")
+let options = document.getElementById("createproject")
 addBtn.addEventListener("click", () => {
-    console.log("Créer un projet");
+    if (options.classList.contains("visible")) {
+        options.classList.remove("visible")
+        options.classList.add("invisible")
+    } else {
+        options.classList.remove("invisible")
+        options.classList.add("visible")
+    }
 })
 </script>
