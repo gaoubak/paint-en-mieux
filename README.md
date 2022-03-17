@@ -28,7 +28,7 @@
 | Modier les dimensions de la forme                                                            | ✅           | ✅           |
 | Changer les couleurs de la forme                                                             | ❌           | ✅           |
 | Sauvegarder ce dessin (pour la reprendre plus tard)                                          | ❌           | ✅           |
-| Charger un dessin (parmi les sauvegardes)                                                    | ❌           | ⭕           |
+| Charger un dessin (parmi les sauvegardes)                                                    | ❌           | ♻️           |
 | Exporter le dessin au format image                                                           | ❌           | ⭕           |
 | Exporter le dessin au format PDF                                                             | ❌           | ⭕           |
 | Login                                                                                        | ✅           | ✅           |
