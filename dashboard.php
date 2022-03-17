@@ -1,7 +1,7 @@
 <?php
 require "./components/header.php";
 require "./includes/db_connect.inc.php";
-$getProjectsCommand = "SELECT projectname,author FROM projects WHERE author=" . '"' . $_SESSION["useruid"] . '"';
+$getProjectsCommand = "SELECT projectname,author,id FROM projects WHERE author=" . '"' . $_SESSION["useruid"] . '"';
 $getProjects = mysqli_query($connection, $getProjectsCommand);
 if (!isset($_SESSION["useruid"])) {
     header("location: index.php");
@@ -34,7 +34,7 @@ if (!isset($_SESSION["useruid"])) {
         <?php
         if (mysqli_num_rows($getProjects) > 0) {
             while ($row = mysqli_fetch_assoc($getProjects)) {
-                echo "<button onclick='load()' class='project-card " . $row['author'] . "'><h2 class='project-name'>Project:</h2><span>" . $row["projectname"] . "</span>" . "<h3 class='author'>Author: " . $row["author"] . "</h3></button>";
+                echo "<button onclick='load({$row["id"]})' class='project-card " . $row['author'] . "'><h2 class='project-name'>Project:</h2><span>" . $row["projectname"] . "</span>" . "<h3 class='author'>Author: " . $row["author"] . "</h3></button>";
             }
         } else {
             echo "you don't have any projects";
