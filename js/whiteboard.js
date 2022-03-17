@@ -272,3 +272,32 @@ function addShape($shape) {
 //   let projectname = document.getElementById("projectname").value;
 //   window.location = `whiteboard.php?board="${childrens}"&projectName=${projectname}`;
 // }
+let save = () => {
+  let board = document.getElementById("board");
+  let boardContent = {};
+  for (let i = 0; i < board.children.length; i++) {
+    let divId = board.children[i].id;
+    let Objectshape = board.children[i].classList[0];
+    let top = board.children[i].style["top"];
+    let left = board.children[i].style["left"];
+    boardContent.push = {
+      Id: divId,
+      Shapes: Objectshape,
+      Top: top,
+      Left: left,
+    };
+    console.log(boardContent);
+  }
+  let projectname = document.getElementById("projectname").value;
+
+  var formData = new FormData();
+  formData.append("board", JSON.stringify(boardContent));
+  formData.append("projectname", projectname);
+  console.log(formData);
+  fetch("./includes/saveBoard.inc.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.text())
+    .then((text) => console.log(text));
+};

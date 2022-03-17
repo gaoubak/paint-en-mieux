@@ -13,7 +13,8 @@ if (!isset($_SESSION["useruid"])) {
         <h1>My project</h1>
         <ul>
             <li><a href="intel.php"><img src="./styles/img/info.svg" alt=""></a></li>
-            <li><a href="https://github.com/paint-en-mieux/paint-en-mieux"><img src="./styles/img/github.svg" alt=""></a></li>
+            <li><a href="https://github.com/paint-en-mieux/paint-en-mieux"><img src="./styles/img/github.svg"
+                        alt=""></a></li>
             <li><a class="logout" href="./includes/Logout.inc.php"><img src="./styles/img/logout.svg" alt=""></a></li>
         </ul>
     </nav>
@@ -33,7 +34,7 @@ if (!isset($_SESSION["useruid"])) {
         <?php
         if (mysqli_num_rows($getProjects) > 0) {
             while ($row = mysqli_fetch_assoc($getProjects)) {
-                echo "<div class='project-card " . $row['author'] . "'><h2 class='project-name'>Project:</h2><span>" . $row["projectname"] . "</span>" . "<h3 class='author'>Author: " . $row["author"] . "</h3></div>";
+                echo "<button onclick='load()' class='project-card " . $row['author'] . "'><h2 class='project-name'>Project:</h2><span>" . $row["projectname"] . "</span>" . "<h3 class='author'>Author: " . $row["author"] . "</h3></button>";
             }
         } else {
             echo "you don't have any projects";
@@ -44,15 +45,16 @@ if (!isset($_SESSION["useruid"])) {
 <?php
 mysqli_close($connection); ?>
 <script>
-    let addBtn = document.getElementById("addCard")
-    let options = document.getElementById("createproject")
-    addBtn.addEventListener("click", () => {
-        if (options.classList.contains("visible")) {
-            options.classList.remove("visible")
-            options.classList.add("invisible")
-        } else {
-            options.classList.remove("invisible")
-            options.classList.add("visible")
-        }
-    })
+let addBtn = document.getElementById("addCard");
+let options = document.getElementById("createproject");
+addBtn.addEventListener("click", () => {
+    if (options.classList.contains("visible")) {
+        options.classList.remove("visible");
+        options.classList.add("invisible");
+    } else {
+        options.classList.remove("invisible");
+        options.classList.add("visible");
+    }
+});
 </script>
+<script src="./js/dashboard.js"></script>

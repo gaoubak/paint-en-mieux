@@ -10,10 +10,11 @@ if (!isset($_SESSION["useruid"])) {
 <?php
 require "./includes/db_connect.inc.php";
 require "./includes/functions.inc.php";
-if (isset($_GET["board"]) && isset($_GET["projectName"])) {
+exit();
+/* if (isset($_GET["board"]) && isset($_GET["projectName"])) {
     $boardcontent = $_GET["board"];
     $projectName = $_GET["projectName"];
     $author = $_SESSION["useruid"];
     saveProject($connection, $author, $projectName, $boardcontent);
-}
+} */
 ?>
