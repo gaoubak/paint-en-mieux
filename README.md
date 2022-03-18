@@ -13,7 +13,7 @@
 
 ### Les outils
 
-| Fonctionnalité                                                                               | Blackboard   | Whiteboard       |
+| Fonctionnalité                                                                               | Version Canvas   | Version HTML       |
 | -------------------------------------------------------------------------------------------- | ------------ | ---------------- |
 | Dessiner un rectangle                                                                        | ✅           | ✅               |
 | Dessiner un cercle ou une ellipse                                                            | ✅           | ✅               |
