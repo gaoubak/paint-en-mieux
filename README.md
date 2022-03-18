@@ -54,24 +54,24 @@
 
 ## Mis a jour le 18/03/22
 
-| Fonctionnalité                                                                               | Version Canvas | Qui          | Version HTML | Qui          |
-| -------------------------------------------------------------------------------------------- | -------------- | ------------ | ------------ | ------------ |
-| Dessiner un rectangle                                                                        | ✅             | Kader,Arsène | ✅           | Kader,Arsène |
-| Dessiner un cercle ou une ellipse                                                            | ✅             | Kader,Arsène | ✅           | Kader,Arsène |
-| Dessiner un triangle (pointe vers le haut)                                                   | ✅             | Kader,Arsène | ✅           | Kader,Arsène |
-| Dessiner une zone de texte                                                                   | ❌             |              | ✅           | Vejko        |
-| Une couleur "primaire" utilisée pour le contour des formes ou pour la couleur du texte       | ❌             |              | ✅           | Veljko,Ethan |
-| Une couleur "secondaire" utilisée pour le remplissage des formes ou le surlignement du texte | ❌             |              | ✅           | Ethan        |
-| Un menu déroulant permettant de sélectionner une police parmi trois (minimum)                | ❌             |              | ✅           | Kader,Ethan  |
-| Votre site doit proposer une grande zone blanche pour y dessiner des formes                  | ✅             | Arsène,Kader | ✅           | Ethan        |
-| Au clic sur une forme, une zone doit apparaître permettant de                                | ------------   |              | ------------ |              |
-| Déplacer la forme                                                                            | ⭕             | Kader        | ✅           | Ethan        |
-| Modier les dimensions de la forme                                                            | ✅             | Kader        | ✅           | Ethan        |
-| Changer les couleurs de la forme                                                             | ❌             |              | ✅           | Ethan        |
-| Sauvegarder ce dessin (pour la reprendre plus tard)                                          | ❌             |              | ✅           | Ethan        |
-| Charger un dessin (parmi les sauvegardes)                                                    | ❌             |              | ✅           | Ethan        |
-| Exporter le dessin au format image                                                           | ❌             |              | ⭕           | Arsène,Kader |
-| Exporter le dessin au format PDF                                                             | ❌             |              | ⭕           | Arsène,Kader |
-| Login                                                                                        | ✅             | Ethan        | ✅           | Ethan        |
-| Signup                                                                                       | ✅             | Ethan        | ✅           | Ethan        |
-| Dashboard des dessins récents                                                                | ✅             | Ethan        | ✅           | Ethan        |
+| Fonctionnalité                                                                               | Version Canvas | Qui             | Version HTML | Qui             |
+| -------------------------------------------------------------------------------------------- | -------------- | --------------- | ------------ | --------------- |
+| Dessiner un rectangle                                                                        | ✅             | Bakayoko,Arsène | ✅           | Bakayoko,Arsène |
+| Dessiner un cercle ou une ellipse                                                            | ✅             | Bakayoko,Arsène | ✅           | Bakayoko,Arsène |
+| Dessiner un triangle (pointe vers le haut)                                                   | ✅             | Bakayoko,Arsène | ✅           | Bakayoko,Arsène |
+| Dessiner une zone de texte                                                                   | ❌             |                 | ✅           | Vejko           |
+| Une couleur "primaire" utilisée pour le contour des formes ou pour la couleur du texte       | ❌             |                 | ✅           | Veljko,Ethan    |
+| Une couleur "secondaire" utilisée pour le remplissage des formes ou le surlignement du texte | ❌             |                 | ✅           | Ethan           |
+| Un menu déroulant permettant de sélectionner une police parmi trois (minimum)                | ❌             |                 | ✅           | Bakayoko,Ethan  |
+| Votre site doit proposer une grande zone blanche pour y dessiner des formes                  | ✅             | Arsène,Bakayoko | ✅           | Ethan           |
+| Au clic sur une forme, une zone doit apparaître permettant de                                | ------------   | ------------    | ------------ | ------------    |
+| Déplacer la forme                                                                            | ⭕             | Bakayoko        | ✅           | Ethan           |
+| Modier les dimensions de la forme                                                            | ✅             | Bakayoko        | ✅           | Ethan           |
+| Changer les couleurs de la forme                                                             | ❌             |                 | ✅           | Ethan           |
+| Sauvegarder ce dessin (pour la reprendre plus tard)                                          | ❌             |                 | ✅           | Ethan           |
+| Charger un dessin (parmi les sauvegardes)                                                    | ❌             |                 | ✅           | Ethan           |
+| Exporter le dessin au format image                                                           | ❌             |                 | ⭕           | Arsène,Bakayoko |
+| Exporter le dessin au format PDF                                                             | ❌             |                 | ⭕           | Arsène,Bakayoko |
+| Login                                                                                        | ✅             | Ethan           | ✅           | Ethan           |
+| Signup                                                                                       | ✅             | Ethan           | ✅           | Ethan           |
+| Dashboard des dessins récents                                                                | ✅             | Ethan           | ✅           | Ethan           |
