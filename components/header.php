@@ -1,4 +1,5 @@
 <?php
+// Entête du site
 session_start();
 ?>
 <!DOCTYPE html>
@@ -9,8 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paint en mieux</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <meta http-equiv="refresh" content="30" />
+    <link rel="stylesheet" href="./styles/global.css" />
 </head>
 
 <body>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Smooch+Sans:wght@300;400;500;600;700&display=swap");
 *,
 *::after,
 *::before {
@@ -7,6 +8,18 @@
 }
 body {
   background: #efefef;
+}
+.Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.BhuTuka {
+  font-family: "BhuTuka Expanded One", cursive;
+}
+.Smooch {
+  font-family: "Smooch Sans", sans-serif;
+}
+#board {
+  -webkit-print-color-adjust: exact;
 }
 .welcome-page {
   display: flex;
@@ -19,6 +32,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .welcome-page .links {
   margin: 2vh;
 }
@@ -53,6 +67,9 @@ img {
   height: 4vh;
   width: 4vh;
 }
+.circle {
+  border-radius: 60%;
+}
 .item {
   position: absolute;
   z-index: 2;
@@ -60,7 +77,7 @@ img {
   border: 1px solid #d3d3d3;
   text-align: center;
   height: 5vh;
-  width: 5vh;
+  min-width: 5vh;
   resize: none;
 }
 .resizer {
@@ -68,7 +85,7 @@ img {
   width: 10px;
   border-radius: 60%;
   background: white;
-  border: thick solid black;
+  border: 3px solid black;
   z-index: 3;
   position: absolute;
 }
@@ -92,12 +109,29 @@ img {
   right: -1px;
   cursor: se-resize;
 }
-.t{
-  top: -1px;
-  margin: 0 auto;
+.t {
+  top: 0;
+  left: 40%;
   cursor: n-resize;
+}
+.text {
+  float: left;
+  text-align: center;
+  line-height: 24px;
+  vertical-align: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .Resize-Active {
   resize: both;
   overflow: auto;
+}
+.font-list {
+  display: none;
+}
+.txt:hover .font-list {
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  transform: translateY(5vh);
 }

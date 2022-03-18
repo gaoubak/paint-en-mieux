@@ -1,4 +1,5 @@
 <?php
+//Fichier contenant la majorité des fonction php utilisé
 // Vérifie que le formulaire n'est pas d'input vide
 // @Ethan
 function EmptyInputSignUp($name, $email, $password, $pwdcheck)
@@ -68,6 +69,27 @@ function UsernameExist($connection, $name, $email)
 
     mysqli_stmt_close($stmt);
 }
+function projectNameExist($connection, $projectname)
+{
+    $sql = "SELECT * FROM projects WHERE projectname = ?;";
+    $stmt = mysqli_stmt_init($connection);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signUp.php?error=stmtFailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "s", $projectname);
+    mysqli_stmt_execute($stmt);
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row;
+    } else {
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
 // Créer un utilisateur dans la base de donnée
 // @Ethan
 function createUser($connection, $name, $email, $password)
@@ -82,6 +104,55 @@ function createUser($connection, $name, $email, $password)
     mysqli_stmt_bind_param($stmt, "sss", $email, $hashedpwd, $name);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: ../Login.php");
     exit();
+}
+function saveProject($connection, $author, $projectName, $board)
+{
+    $sql = "INSERT INTO projects (author,projectname,board) VALUES (?,?,?);";
+    $stmt = mysqli_stmt_init($connection);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=JeSaisPas");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "sss", $author, $projectName, $board);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ./whiteboard.php");
+    exit();
+}
+// Vérifie que le formulaire n'est pas d'input vide
+// @Ethan
+function EmptyInputLogin($username, $pwd)
+{
+    if (empty($username) || empty($pwd)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+// Login l'utilisateur
+// @Ethan
+function loginUser($connection, $uid, $pwd)
+{
+    $uidExist = UsernameExist($connection, $uid, $uid);
+
+    if ($uidExist === false) {
+        header("location: ../Login.php?error=wrongLogin");
+        exit();
+    }
+    $pwdHashed = $uidExist['password'];
+    $checkPass = password_verify($pwd, $pwdHashed);
+
+    if ($checkPass === false) {
+        header("location: ../login.php?error=wrongLogin");
+        exit();
+    } else if ($checkPass === true) {
+        session_start();
+        $_SESSION["userid"] = $uidExist['usersId'];
+        $_SESSION["useruid"] = $uidExist['username'];
+        header("location: ../index.php");
+        exit();
+    }
 }

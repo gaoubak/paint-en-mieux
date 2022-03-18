@@ -19,11 +19,11 @@ function addShape($shape) {
   bl.classList.add("bl"); //Bottom Left
   br.classList.add("br"); //Bottom Right
   t.classList.add("t"); //Top
-  tl.classList.add("resizer"); // Top left
-  tr.classList.add("resizer"); //Top Right
-  bl.classList.add("resizer"); //Bottom Left
-  br.classList.add("resizer"); //Bottom Right
-  t.classList.add("resizer"); //Top
+  tl.classList.add("resizer");
+  tr.classList.add("resizer");
+  bl.classList.add("resizer");
+  br.classList.add("resizer");
+  t.classList.add("resizer");
   switch ($shape) {
     case "circle":
       shapeC = document.createElement("div");
@@ -39,29 +39,38 @@ function addShape($shape) {
 
     case "triangle":
       shapeT = document.createElement("div");
-      shapeT.class = "triangle";
-      shapeT.class = "item";
+      shapeT.classList.add("triangle");
+      shapeT.classList.add("item");
       shapeT.id = id();
       board.appendChild(shapeT);
-      shapeT.appendChild(t, br, bl);
+      shapeT.appendChild(t);
+      shapeT.appendChild(br);
+      shapeT.appendChild(bl);
       break;
 
     case "rectangle":
       shapeR = document.createElement("div");
-      shapeR.class = "rectangle";
-      shapeR.class = "item";
+      shapeR.classList.add("rectangle");
+      shapeR.classList.add("item");
       shapeR.id = id();
       board.appendChild(shapeR);
-      shapeR.appendChild(tl, tr, bl, br);
+      shapeR.appendChild(tl);
+      shapeR.appendChild(tr);
+      shapeR.appendChild(bl);
+      shapeR.appendChild(br);
       break;
 
     case "text":
-      shapeTT = document.createElement("input");
-      shapeTT.class = "texte";
-      shapeTT.class = "item";
+      shapeTT = document.createElement("div");
+      shapeTT.classList.add("texte");
+      shapeTT.classList.add("item");
+      shapeTT.setAttribute("contenteditable", "");
       shapeTT.id = id();
       board.appendChild(shapeTT);
-      shapeTT.appendChild(tl, tr, bl, br);
+      shapeTT.appendChild(tl);
+      shapeTT.appendChild(tr);
+      shapeTT.appendChild(bl);
+      shapeTT.appendChild(br);
       break;
 
     default:
