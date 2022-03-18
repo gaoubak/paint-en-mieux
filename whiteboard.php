@@ -13,18 +13,23 @@ function renderBoardData(projectname, projectboard) {
     let board = document.getElementById("board")
     let pName = projectname;
     document.getElementById("projectname").value = pName
+    console.log(projectboard);
     let parsedJson = JSON.parse(projectboard);
-    shape = document.createElement("div");
-    shape.classList.add(parsedJson.push.Shapes);
-    shape.classList.add("item");
-    shape.id = parsedJson.push.Id;
-    shape.style.top = parsedJson.push.Top;
-    shape.style.left = parsedJson.push.Left;
-    shape.style.height = parsedJson.push.Height;
-    shape.style.width = parsedJson.push.Width;
-    shape.style.background = parsedJson.push.BgColor
-    shape.style.border = parsedJson.push.Border;
-    board.appendChild(shape);
+    parsedJson.forEach(element => {
+        console.log(element);
+        shape = document.createElement("div");
+        shape.classList.add("item");
+        shape.classList.add(element.Shapes);
+        shape.id = parsedJson.push.Id;
+        shape.style.top = element.Top;
+        shape.style.left = element.Left;
+        shape.style.height = element.Height;
+        shape.style.width = element.Width;
+        shape.style.background = element.BgColor;
+        shape.style.border = element.Border;
+        shape.innerHtml = element.Txt
+        board.appendChild(shape);
+    });
 }
 </script>
 <?php

@@ -240,7 +240,7 @@ function addShape($shape) {
 // Sauvegarde d'un board sur la base de donné
 let save = () => {
   let board = document.getElementById("board");
-  let boardContent = {};
+  let boardContent = [];
   // On transfrome chaque div en objet Json plus léger et lisible en javascript
   for (let i = 0; i < board.children.length; i++) {
     let divId = board.children[i].id;
@@ -251,7 +251,7 @@ let save = () => {
     let height = board.children[i].style["height"];
     let bgColor = board.children[i].style["background-color"];
     let border = board.children[i].style["border"];
-    boardContent.push = {
+    boardContent.push({
       Id: divId,
       Shapes: Objectshape,
       Top: top,
@@ -260,7 +260,7 @@ let save = () => {
       Height: height,
       BgColor: bgColor,
       Border: border,
-    };
+    });
   }
   let projectname = document.getElementById("projectname").value;
   // Création d'un formulaire virtuelle pour envoyer les donnée à un script php
