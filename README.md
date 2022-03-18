@@ -1,11 +1,11 @@
 # paint-en-mieux
 
-| Personne            | Rôle                      |
-| ------------------- | ------------------------- |
-| Videau Ethan        | Fullstack && Archi Réseau |
-| Gaoussou Bakayoko   | FrontEnd                  |
-| DOBROVOLSKYY Arsène | FrontEnd & Design         |
-| Vojinovic Veljko    | FrontEnd & Design         |
+| Personne            | Rôle                      | Github                                   | Linkedin                                                                               |
+| ------------------- | ------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
+| VIDEAU Ethan        | Fullstack && Archi Réseau | [@Setsudan](https://github.com/Setsudan) | [Launay Ethan](https://www.linkedin.com/in/videau-launay-ethan/)                       |
+| GAOUSSOU Bakayoko   | FrontEnd                  | [@gaoubak](https://github.com/gaoubak)   | [Gaoussou Bakayoko](https://www.linkedin.com/in/kader-bakayoko-341b53190/)             |
+| DOBROVOLSKYY Arsène | FrontEnd & Design         | [@Daiiruin](https://github.com/Daiiruin) | [DOBROVOLSKYY Arsène](https://www.linkedin.com/in/ars%C3%A8ne-dobrovolskyy-458045226/) |
+| VOJINOVIC Veljko    | FrontEnd & Design         | [@V-eljko](https://github.com/V-eljko)   | [Vojinovic Veljko](https://www.linkedin.com/in/veljko-vojinovic-365823226/)            |
 
 ---
 
