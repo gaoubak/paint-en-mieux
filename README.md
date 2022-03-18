@@ -38,7 +38,7 @@
    - Changer la taille de l'objet séléctionné
    - créer des formes en appuyant sur les boutons ⭕,🔺,🔲
    - créer du texte avec le bouton "_T_"
-   - modifier la police avec le bouton "_A_"
+   - modifier la police avec le bouton "**A**"
    - Changer la couleur de l'objet séléctionné
    - Changer la couleur de la bordure de l'objet séléctionné
    - Sauvegarder le projet
