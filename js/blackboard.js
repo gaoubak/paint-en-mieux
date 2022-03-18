@@ -3,6 +3,7 @@
  * Fonction permettant d'ajouter des formes au canvas
  * l'argument est utilisé dans une switch pour décider de la forme à générer
  * @param {Str} $shape
+ * Arsène,Kader,Veljko
  */
 function addShape($shape) {
   var canvas = document.querySelector("canvas");

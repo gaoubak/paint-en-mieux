@@ -1,5 +1,5 @@
 <?php
-
+// Check que l'utilisateur est accès à cet page après avoir tenter de se créer un compte
 if (isset($_POST['submit'])) {
 
     $name = $_POST['username'];
@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $pwdcheck = $_POST['pwdcheck'];
 
-    // error handling
+    // Management des erreurs
 
     require "./db_connect.inc.php";
     require "./functions.inc.php";

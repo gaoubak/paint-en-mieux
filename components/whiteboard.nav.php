@@ -1,3 +1,6 @@
+<?php
+// Totalité de la toolbar avec les fonctions javascript qui permettent d'utiliser les != outils
+?>
 <input type="text" name="projectname" id="projectname" placeholder="Project Name...">
 <button onclick="onFocus()" class="tool shapes" id="focus">
     <img src="./styles/img/select.svg" alt="select" />
