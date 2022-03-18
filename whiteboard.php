@@ -36,6 +36,7 @@ function renderBoardData(projectname, projectboard) {
 <?php
 require "./includes/db_connect.inc.php";
 require "./includes/functions.inc.php";
+
 if (isset($_POST["board"])) {
     setcookie("projectname", $_POST['projectname']);
     setcookie("id", $_POST['id']);

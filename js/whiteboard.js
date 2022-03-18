@@ -274,3 +274,4 @@ let save = () => {
     .then((response) => response.text())
     .then(() => alert("projet sauvegarder"));
 };
+let saveEnPdf = () => {window.location = "pdf.php?pdfsave=true"}

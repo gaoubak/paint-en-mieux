@@ -44,3 +44,4 @@
 <button onclick="save()" class="tool" id="Save">
     <img src="./styles/img/Save.svg" alt="Save" />
 </button>
+<button onclick="saveEnPdf()">PDF</btn>
