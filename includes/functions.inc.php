@@ -1,4 +1,5 @@
 <?php
+//Fichier contenant la majorité des fonction php utilisé
 // Vérifie que le formulaire n'est pas d'input vide
 // @Ethan
 function EmptyInputSignUp($name, $email, $password, $pwdcheck)

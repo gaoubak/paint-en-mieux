@@ -236,61 +236,36 @@ function addShape($shape) {
       break;
   }
 }
-//! NE PAS UTILISER
-// Fonction permettant de partager le contenu dynamique ajouter par javascript
-// Et de le transmettre à php pour une sauvegarde sur le serveur
-//! fonctionne mais le serveur ne peut pas récupérer un élément aussi long
-//? Abandon de l'option whiteboard et création de l'option blackboard avec canvas le 16/03 dans la matinée
-
-// function divToJson() {
-//   let listofitem = document.querySelectorAll(".item");
-
-//   for (let item of listofitem) {
-//     listofitem.forEach((i) => {
-//       i.classList.remove("focus");
-//       i.innerHTML = "";
-//     });
-//   }
-//   let board = document.getElementById("board");
-//   let childrens = [];
-//   -let elements = board.children
-//   -for (let i = 0; i < elements.length; i++) {
-//   -    let childrenAndAttributes = elements[i].attributes
-//   -    childrens.push(childrenAndAttributes)
-//   -}
-/* let childrens = [];
-    let board = document.getElementById("board");
-    for (let i = 0; i < board.innerHTML.length; i++) {
-      childrens.push(board.innerHTML);
-    }
-    let projectname = document.getElementById("projectname").value;
-    console.log("Code envoyer"); */
-//   for (let i = 0; i < board.innerHTML.length; i++) {
-//     childrens.push(board.innerHTML);
-//   }
-//   console.log(childrens);
-//   let projectname = document.getElementById("projectname").value;
-//   window.location = `whiteboard.php?board="${childrens}"&projectName=${projectname}`;
-// }
+// Ethan
+// Sauvegarde d'un board sur la base de donné
 let save = () => {
   let board = document.getElementById("board");
   let boardContent = {};
+  // On transfrome chaque div en objet Json plus léger et lisible en javascript
   for (let i = 0; i < board.children.length; i++) {
     let divId = board.children[i].id;
     let Objectshape = board.children[i].classList[0];
     let top = board.children[i].style["top"];
     let left = board.children[i].style["left"];
+    let width = board.children[i].style["width"];
+    let height = board.children[i].style["height"];
+    let bgColor = board.children[i].style["background-color"];
+    let border = board.children[i].style["border"];
     boardContent.push = {
       Id: divId,
       Shapes: Objectshape,
       Top: top,
       Left: left,
+      Width: width,
+      Height: height,
+      BgColor: bgColor,
+      Border: border,
     };
-    console.log(boardContent);
+    //console.log(boardContent);
   }
   let projectname = document.getElementById("projectname").value;
-
-  var formData = new FormData();
+  // Création d'un formulaire virtuelle pour envoyer les donnée à un script php
+  let formData = new FormData();
   formData.append("board", JSON.stringify(boardContent));
   formData.append("projectname", projectname);
   console.log(formData);
@@ -299,5 +274,6 @@ let save = () => {
     body: formData,
   })
     .then((response) => response.text())
-    .then((text) => console.log(text));
+    .then((text) => console.log(text)) // Une fois fait on renvoi à l'index qui décide la redirection
+    .then((window.location = "./index.php"));
 };

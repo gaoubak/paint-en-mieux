@@ -1,6 +1,8 @@
 <?php
+// Ethan
 require "./components/header.php";
 require "./includes/db_connect.inc.php";
+// Connection à la db en séléctionnent uniquement les projets de l'utilisateur connecté
 $getProjectsCommand = "SELECT projectname,author,id FROM projects WHERE author=" . '"' . $_SESSION["useruid"] . '"';
 $getProjects = mysqli_query($connection, $getProjectsCommand);
 if (!isset($_SESSION["useruid"])) {
@@ -32,6 +34,7 @@ if (!isset($_SESSION["useruid"])) {
             </div>
         </div>
         <?php
+        // boucle pour rendre les projets et si inexistant affiche un message indiquant qu'il n'y a pas de projet 
         if (mysqli_num_rows($getProjects) > 0) {
             while ($row = mysqli_fetch_assoc($getProjects)) {
                 echo "<button onclick='load({$row["id"]})' class='project-card " . $row['author'] . "'><h2 class='project-name'>Project:</h2><span>" . $row["projectname"] . "</span>" . "<h3 class='author'>Author: " . $row["author"] . "</h3></button>";
@@ -45,6 +48,8 @@ if (!isset($_SESSION["useruid"])) {
 <?php
 mysqli_close($connection); ?>
 <script>
+// surveille le clique sur le bouton ajouter 
+// et rajoute/ enlève des class html pour montrer les boutons
 let addBtn = document.getElementById("addCard");
 let options = document.getElementById("createproject");
 addBtn.addEventListener("click", () => {

@@ -1,4 +1,5 @@
-<?php require "./components/header.php" ?>
+<?php // Ethan
+require "./components/header.php" ?>
 <section class="Login-Form">
     <form action="./includes/Login.inc.php" method="POST">
         <h1>Login</h1>
@@ -11,6 +12,7 @@
             <input type="password" name="pwd" id="">
         </div>
         <?php
+        // Si erreur dans l'uri on affiche un message d'erreur dans le form
         if (isset($_GET['error'])) {
             if ($_GET['error'] == 'wrongLogin') {
                 echo "<p class='error'>One of the two fields is wrong</p>";
