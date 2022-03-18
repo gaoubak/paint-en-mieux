@@ -261,19 +261,16 @@ let save = () => {
       BgColor: bgColor,
       Border: border,
     };
-    //console.log(boardContent);
   }
   let projectname = document.getElementById("projectname").value;
   // Création d'un formulaire virtuelle pour envoyer les donnée à un script php
   let formData = new FormData();
   formData.append("board", JSON.stringify(boardContent));
   formData.append("projectname", projectname);
-  console.log(formData);
   fetch("./includes/saveBoard.inc.php", {
     method: "POST",
     body: formData,
   })
     .then((response) => response.text())
-    .then((text) => console.log(text)) // Une fois fait on renvoi à l'index qui décide la redirection
-    .then((window.location = "./index.php"));
+    .then(() => alert("projet sauvegarder"));
 };

@@ -12,7 +12,6 @@ function load(projectId) {
       let parsedJson = JSON.parse(txt);
       parsedJson.forEach((project) => {
         if (project[2] == projectId) {
-          //console.log(project);
           let formData = new FormData();
           formData.append("projectname", project[0]);
           formData.append("board", project[1]);
@@ -20,7 +19,9 @@ function load(projectId) {
           fetch("./whiteboard.php", {
             method: "POST",
             body: formData,
-          });
+          })
+            .then((response) => response.text())
+            .then(() => (window.location = "whiteboard.php?loaddata=true"));
         } else {
           return;
         }

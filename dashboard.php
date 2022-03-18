@@ -15,8 +15,7 @@ if (!isset($_SESSION["useruid"])) {
         <h1>My project</h1>
         <ul>
             <li><a href="intel.php"><img src="./styles/img/info.svg" alt=""></a></li>
-            <li><a href="https://github.com/paint-en-mieux/paint-en-mieux"><img src="./styles/img/github.svg"
-                        alt=""></a></li>
+            <li><a href="https://github.com/paint-en-mieux/paint-en-mieux"><img src="./styles/img/github.svg" alt=""></a></li>
             <li><a class="logout" href="./includes/Logout.inc.php"><img src="./styles/img/logout.svg" alt=""></a></li>
         </ul>
     </nav>
@@ -27,7 +26,7 @@ if (!isset($_SESSION["useruid"])) {
         </div>
         <div id="createproject" class="invisible">
             <div class="with-whiteboard">
-                <a href="whiteboard.php">Create just a draft</a>
+                <a href="whiteboard.php?loaddata=false">Create just a draft</a>
             </div>
             <div class="with-blackboard">
                 <a href="blackboard.php">Create a permanent board</a>
@@ -48,18 +47,18 @@ if (!isset($_SESSION["useruid"])) {
 <?php
 mysqli_close($connection); ?>
 <script>
-// surveille le clique sur le bouton ajouter 
-// et rajoute/ enlève des class html pour montrer les boutons
-let addBtn = document.getElementById("addCard");
-let options = document.getElementById("createproject");
-addBtn.addEventListener("click", () => {
-    if (options.classList.contains("visible")) {
-        options.classList.remove("visible");
-        options.classList.add("invisible");
-    } else {
-        options.classList.remove("invisible");
-        options.classList.add("visible");
-    }
-});
+    // surveille le clique sur le bouton ajouter 
+    // et rajoute/ enlève des class html pour montrer les boutons
+    let addBtn = document.getElementById("addCard");
+    let options = document.getElementById("createproject");
+    addBtn.addEventListener("click", () => {
+        if (options.classList.contains("visible")) {
+            options.classList.remove("visible");
+            options.classList.add("invisible");
+        } else {
+            options.classList.remove("invisible");
+            options.classList.add("visible");
+        }
+    });
 </script>
 <script src="./js/dashboard.js"></script>
