@@ -3,7 +3,7 @@
 | Personne            | Rôle                      |
 | ------------------- | ------------------------- |
 | Videau Ethan        | Fullstack && Archi Réseau |
-| Gaussou Kader       | FrontEnd                  |
+| Gaoussou Bakayoko   | FrontEnd                  |
 | DOBROVOLSKYY Arsène | FrontEnd & Design         |
 | Vojinovic Veljko    | FrontEnd & Design         |
 
