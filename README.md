@@ -46,6 +46,12 @@
 
 ## Les fonctionnalité
 
+| ✅    | ⭕                 | ❌             |
+| ----- | ------------------ | -------------- |
+| Dispo | En cours de codage | Pas disponible |
+
+---
+
 | Fonctionnalité                                                                               | Version Canvas | Version HTML |
 | -------------------------------------------------------------------------------------------- | -------------- | ------------ |
 | Dessiner un rectangle                                                                        | ✅             | ✅           |
