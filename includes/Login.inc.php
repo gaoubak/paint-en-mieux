@@ -1,5 +1,4 @@
 <?php
-//Ethan
 // Vérifie que l'utilisateur est bien arrivé ici via la page login
 if (isset($_POST['submit'])) {
 

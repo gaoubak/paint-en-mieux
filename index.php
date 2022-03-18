@@ -1,5 +1,4 @@
 <?php
-// Ethan
 require_once "./components/header.php" ?>
 
 <div class="welcome-page">

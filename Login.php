@@ -1,4 +1,4 @@
-<?php // Ethan
+<?php
 require "./components/header.php" ?>
 <section class="Login-Form">
     <form action="./includes/Login.inc.php" method="POST">

@@ -1,4 +1,4 @@
-<?php // Ethan
+<?php
 require "./components/header.php" ?>
 <section class="signUp-Form">
     <form action="./includes/signUp.inc.php" method="POST">

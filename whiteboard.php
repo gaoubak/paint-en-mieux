@@ -8,7 +8,7 @@ if (!isset($_SESSION["useruid"])) {
 </div>
 <script src="./js/whiteboard.js"></script>
 <script>
-// Tentative de rendu du projet
+// Rendu des formes sur la page
 function renderBoardData(projectname, projectboard) {
     let board = document.getElementById("board")
     let pName = projectname;
@@ -18,6 +18,7 @@ function renderBoardData(projectname, projectboard) {
     parsedJson.forEach(element => {
         console.log(element);
         shape = document.createElement("div");
+        // Ajout de tout les arguments nécéssaire
         shape.classList.add("item");
         shape.classList.add(element.Shapes);
         shape.id = parsedJson.push.Id;
@@ -27,7 +28,7 @@ function renderBoardData(projectname, projectboard) {
         shape.style.width = element.Width;
         shape.style.background = element.BgColor;
         shape.style.border = element.Border;
-        shape.innerHtml = element.Txt
+        // Ajout de la forme au tableau
         board.appendChild(shape);
     });
 }

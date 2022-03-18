@@ -1,5 +1,4 @@
 <?php
-//Ethan
 // Entête du site
 session_start();
 ?>

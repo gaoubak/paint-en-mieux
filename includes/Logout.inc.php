@@ -1,5 +1,4 @@
 <?php
-// Ethan
 // Déconnection de l'utilisateur si rediriger sur cette page
 session_start();
 session_unset();

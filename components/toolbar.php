@@ -1,5 +1,4 @@
 <?php
-// Ethan
 // Tool bar avec l'include de l'actuel toolbar 
 // à l'origine pour permettre d'avoir différent type d'outils si on était sur la version canvas ou la version html 
 // de paint

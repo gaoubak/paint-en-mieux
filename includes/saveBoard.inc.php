@@ -1,5 +1,4 @@
 <?php
-// Ethan
 session_start();
 require "./db_connect.inc.php";
 require "./functions.inc.php";
